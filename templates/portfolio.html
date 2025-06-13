@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Photography</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                 <li><a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li><a href="{{ url_for('portfolio') }}">Portfolio</a>
+                </li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slideshow-wrapper">
+        <div class="slideshow">
+            <div class="slide">
+                <div class="content">
+                    <h3>Commercials</h3>
+                    <p>Commercials are short promotional videos or advertisements created to market a product, service, or brand. Their main goal is to attract customers, create awareness, and drive sales.</p>
+                    <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Potraits</h3>
+                    <p>A portrait is an artistic representation of a person, typically focusing on their face and expression. The goal of a portrait is to capture the likeness, personality, and even the mood of the subject.</p>
+                    <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Landscape</h3>
+                    <p>A landscape is a type of art or photograph that depicts natural scenery such as mountains, valleys, trees, rivers, forests, and skies. </p>
+                    <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Marriage</h3>
+                    <p>A wedding is a ceremony and celebration where two people are united in marriage. It is often a cultural, religious, or legal event, and traditions vary widely around the world.</p>
+                    <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>+91 9768229333</p>
+                <p>+91 7059186080</p>
+                <a href="mailto:contact@srvstudio.com">contact@srvstudio.com</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>LEARN ABOUT OUR NEW PODCASTS</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>We won’t spam you.</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <h3>FOLLOW US</h3>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

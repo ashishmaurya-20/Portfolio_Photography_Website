@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photography Portfolio</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li><a href="{{ url_for('portfolio') }}">Portfolio</a>
+                </li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            
+            </ul>
+        </nav>
+    </header>
+    <div class="video-container">
+        <video class="bg-video" autoplay muted loop>
+          <source src="static/images/home.mp4" type="video/mp4" />
+        </video>
+      </div>
+    <div id="flying-drone">
+        <img src="static/images/drone.png" alt="Drone" />
+      </div>
+      
+    <div id="floating-camera">
+        <img src="static/images/camera-icon.png" alt="Camera" />
+      </div>
+      <div id="camera-flash"></div>
+      
+    <section class="hero">
+        <h1>Welcome to My Photography Portfolio</h1>
+        <p>Capture your moments, and I'll make them last forever.</p>
+        <a href="{{ url_for('portfolio') }}" class="button">See My Work</a>
+    </section>
+        <footer>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>+91 9768229333</p>
+                <p>+91 7059186080</p>
+                <a href="mailto:contact@srvstudio.com">contact@srvstudio.com</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>LEARN ABOUT OUR NEW PODCASTS</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>We won’t spam you.</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <h3>FOLLOW US</h3>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+        const camera = document.getElementById("floating-camera");
+        const flash = document.getElementById("camera-flash");
+      
+        camera.addEventListener("click", () => {
+          // Optional: Play camera shutter sound
+          const shutter = new Audio("camera-shutter.mp3");
+          shutter.play();
+      
+          // Flash effect
+          flash.style.opacity = "1";
+      
+          setTimeout(() => {
+            flash.style.opacity = "0";
+            location.reload(); // Reload the page
+          }, 800);
+        });
+      </script>
+      
+    <script src="static/script.js"></script>
+</body>
+</html>

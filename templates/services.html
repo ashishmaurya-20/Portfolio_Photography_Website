@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Your Photography Portfolio</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li><a href="{{ url_for('portfolio') }}">Portfolio</a>
+                </li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+   
+    <section class="services">
+        <h2>Photography & Editing Services</h2>
+
+        <div class="service">
+            <h3>Photography Session</h3>
+            <p>Capture your special moments with a professional photography session. Includes up to 2 hours of shooting and a set of 20 edited photos.</p>
+            <p><strong>Price: ₹2000</strong></p>
+            <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+        </div>
+
+        <div class="service">
+            <h3>Photo Editing</h3>
+            <p>Enhance your photos with professional editing. Includes color correction, retouching, and adjustments for up to 10 photos.</p>
+            <p><strong>Price: ₹500</strong></p>
+            <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+        </div>
+
+        <div class="service">
+            <h3>Full Package (Photography + Editing)</h3>
+            <p>Get both a photography session and editing services for the full experience. Includes 2 hours of shooting and up to 20 edited photos.</p>
+            <p><strong>Price: ₹4000</strong></p>
+            <a href="{{ url_for('payment') }}" class="button">Book Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>+91 9768229333</p>
+                <p>+91 7059186080</p>
+                <a href="mailto:contact@srvstudio.com">contact@srvstudio.com</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>LEARN ABOUT OUR NEW PODCASTS</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>We won’t spam you.</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <h3>FOLLOW US</h3>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>

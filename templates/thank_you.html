@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thankyou</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="video-container">
+        <video class="bg-video" autoplay muted loop>
+          <source src="static/images/about-us-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+    <section class="hero">
+        <h2>Thank You!</h2>
+        <p>If you want to add some message please type the message in contact</p>
+        <a href="{{ url_for('contact') }}" class="button">CONTACT US</a>
+    </section>
+        <footer>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>+91 9768229333</p>
+                <p>+91 7059186080</p>
+                <a href="mailto:contact@srvstudio.com">contact@srvstudio.com</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>LEARN ABOUT OUR NEW PODCASTS</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>We won’t spam you.</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <h3>FOLLOW US</h3>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+
+</html>
